@@ -20,6 +20,7 @@ const Hand = () => {
 
     return (
         <div className="hand-content">
+            <div className="dark-overlay"></div>
             <h1>Choose a starter deck</h1>
             <div className="hand">
                 {cards}

@@ -6,6 +6,11 @@
     justify-content: center;
     align-items: center;
     height: calc(100vh - var(--navbar-height));
+    background-image: url('/public/images/bg01.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .line-separator {

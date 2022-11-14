@@ -21,6 +21,7 @@ export default function Home() {
     }
     return (
         <div className="home-page">
+            <div className="dark-overlay"></div>
             <h2>Welcome to</h2>
             <h1>💀 Memento Mori 💀</h1>
             <hr className="line-separator" />

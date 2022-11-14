@@ -4,19 +4,20 @@ import './card.css';
 
 const Card = ({ cardBack = '' }) => {
     useEffect(() => {
-        const $cards = document.querySelectorAll('.card');
+        const $allCards = document.querySelectorAll('.card');
+        let $cards = [].slice.call($allCards);
         let bounds;
 
-        $cards.forEach($card => {
+        $cards.forEach(($card, idx) => {
             $card.addEventListener('mouseenter', () => {
                 bounds = $card.getBoundingClientRect();
-                document.addEventListener('mousemove', function (e) { rotateToMouse(e, $card) });
+                $card.addEventListener('mousemove', function (e) { rotateToMouse(e, $card) });
+                // console.log('mouse enter');
             });
 
             $card.addEventListener('mouseleave', () => {
-                document.removeEventListener('mousemove', function (e) { rotateToMouse(e, $card) });
+                $card.removeEventListener('mousemove', function (e) { rotateToMouse(e, $card) });
                 $card.style.transform = '';
-                $card.style.background = '';
             });
         });
 
@@ -33,32 +34,33 @@ const Card = ({ cardBack = '' }) => {
             const distance = Math.sqrt(center.x ** 4 + center.y ** 2);
 
             $card.style.transform = `
-        scale3d(1.07, 1.07, 1.07)
-        rotate3d(
-          ${center.y / 100},
-          ${center.x / 100},
-          0,
-          ${Math.log(distance) * 2}deg
-        )
-      `;
+                scale3d(1.07, 1.07, 1.07)
+                rotate3d(
+                ${center.y / 100},
+                ${center.x / 100},
+                0,
+                ${Math.log(distance) * 2}deg
+            )`;
 
             $card.querySelector('.glow').style.backgroundImage = `
-        radial-gradient(
-          circle at
-          ${center.x * 2 + bounds.width / 2}px
-          ${center.y * 2 + bounds.height / 2}px,
-          #ffffff55,
-          #0000000f
-        )
-      `;
+                radial-gradient(
+                circle at
+                ${center.x * 2 + bounds.width / 2}px
+                ${center.y * 2 + bounds.height / 2}px,
+                #ffffff55,
+                #0000000f
+            )`;
         }
 
     });
     return (
-        <div id="card" className={`card card-${cardBack}`}>
-            {/* <div className="card-back-text">💀MM💀</div> */}
-            <div className="glow" />
-        </div>
+        <div className="card-container">
+            <div id="card" className={`card card-${cardBack} card-back`}>
+                {/* <div className="card-back-text">💀MM💀</div> */}
+                <div className="glow" />
+            </div>
+            {/* <div className="card-name">Card Name</div> */}
+        </div >
     )
 }
 

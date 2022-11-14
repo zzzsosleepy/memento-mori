@@ -1,3 +1,17 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-name {
+    font-family: var(--font-header);
+    color: #fff;
+    margin-top: 40px;
+    font-size: 1.5rem;
+}
+
 .card {
     font-weight: bold;
     padding: 1em;
@@ -7,17 +21,22 @@
     
     border-radius: 10px;
     border: 5px solid #000;
-    outline: 5px solid #fff;
+
     position: relative;
+    outline: 3px solid #ffffff00;
     
     transition-duration: 300ms;
     transition-property: transform, box-shadow;
     transition-timing-function: ease-out;
     transform: rotate3d(0);
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out, outline 0.3s ease;
   }
 
 .card:hover {
+    cursor: pointer;
     transition-duration: 150ms;
+    outline: 3px solid #ffffffb4;
+    outline-offset: 6px;
     box-shadow: 0 5px 20px 5px #00000044;
 }
 

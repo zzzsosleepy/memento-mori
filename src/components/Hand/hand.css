@@ -11,12 +11,18 @@
 }
 
 .hand-content {
+    z-index: 1;
     position: relative;
     height: calc(100vh - var(--navbar-height));
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-image: url('/public/images/bg03.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .hand-content h1 {
