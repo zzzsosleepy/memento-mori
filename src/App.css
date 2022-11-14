@@ -1,5 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+* {
+  box-sizing: border-box;
+  --font-header: 'Fredoka One', sans-serif;
+  --navbar-height: 70px;
+}
+
 .App {
   text-align: center;
+  background-image: url('/public/images/bg03.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Apply a dark overlay over the background image */
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .App-logo {
