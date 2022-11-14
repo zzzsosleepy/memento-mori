@@ -31,10 +31,10 @@ export default function Home() {
                 <input type="password" ref={messageRef} />
                 <button type="submit">Login</button>
                 <hr />
+                {/* Don't have an account? Sign up */}
                 <label>Don't have an account?</label>
                 <button>Sign up</button>
             </form>
-            {/* Don't have an account? Sign up */}
         </div>
     );
 }

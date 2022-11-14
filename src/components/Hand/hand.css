@@ -1,11 +1,28 @@
 .hand {
-    position: absolute;
+    /* position: relative;
     top: 50%;
     left: 50%;
-    transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%); */
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 55px;
+}
+
+.hand-content {
+    position: relative;
+    height: calc(100vh - var(--navbar-height));
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hand-content h1 {
+    color: #fff;
+    font-size: 4rem;
+    font-family: var(--font-header);
+    text-transform: uppercase;
+    margin-bottom: 55px;
 }

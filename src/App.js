@@ -8,8 +8,8 @@ function App() {
     <div className="App">
       <div className="dark-overlay"></div>
       <Navbar />
-      <Home />
-      {/* <Hand /> */}
+      {/* <Home /> */}
+      <Hand />
     </div>
   );
 }

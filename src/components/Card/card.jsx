@@ -56,7 +56,7 @@ const Card = ({ cardBack = '' }) => {
     });
     return (
         <div id="card" className={`card card-${cardBack}`}>
-            MM
+            {/* <div className="card-back-text">💀MM💀</div> */}
             <div className="glow" />
         </div>
     )

@@ -19,6 +19,7 @@
 
 /* Apply a dark overlay over the background image */
 .dark-overlay {
+  pointer-events: none;
   position: absolute;
   top: 0;
   left: 0;

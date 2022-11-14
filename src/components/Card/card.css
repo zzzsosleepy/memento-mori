@@ -32,6 +32,24 @@
     background-image: radial-gradient(circle at 50% -20%, #ffffff22, #0000000f);
 }
 
+.card-back-text {
+    font-family: var(--font-header);
+    position: absolute;
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    top: 10%;
+    transform: translateY(-50%);
+    left: 0;
+    
+    /* bottom: 0;
+    right: 5px; */
+    letter-spacing: 3px;
+}
+
 .card-01 {
     background-image: url('/public/images/cardback01.png');
     background-repeat: no-repeat;
@@ -48,6 +66,34 @@
 
 .card-03 {
     background-image: url('/public/images/cardback03.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-04 {
+    background-image: url('/public/images/cardback04.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-05 {
+    background-image: url('/public/images/cardback05.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-06 {
+    background-image: url('/public/images/cardback06.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-07 {
+    background-image: url('/public/images/cardback07.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
