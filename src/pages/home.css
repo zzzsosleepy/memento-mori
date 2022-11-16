@@ -66,6 +66,9 @@ form input:focus {
 }
 
 form button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-family: var(--font-header);
     width: 95%;
     padding: 10px;
