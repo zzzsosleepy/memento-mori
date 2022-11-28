@@ -10,8 +10,8 @@ const Navbar = ({ user = '' }) => {
         <div className="navbar">
             <div className="navbar-header">Memento Mori 💀</div>
             <div className="avatarSection">
-                {user.email != 'Guest' ? <div className="navbar-username">{user.providerData[0].displayName}</div> : <div className="navbar-username">Guest</div>}
-                {user.email != 'Guest' ? <img className="avatarImg" src={user.photoURL} alt="avatar" onClick={openLinksMenu} /> : <img className="avatarImg" src="./images/avatar01.png" onClick={openLinksMenu}></img>}
+                {user.email != 'Guest' ? <div className="navbar-username">{user.providerData[0].displayName}</div> : <div className="navbar-username">Jeffrey</div>}
+                {user.email != 'Guest' ? <img className="avatarImg" src={user.photoURL} alt="avatar" onClick={openLinksMenu} /> : <img className="avatarImg" src="./images/avatar02.png" onClick={openLinksMenu}></img>}
                 {/* <img className="avatarImg" src="./images/avatar01.png" onClick={openLinksMenu}></img> */}
                 {/* When clicking your avatar, a links menu should open */}
                 <div className="navbar-links hidden">
