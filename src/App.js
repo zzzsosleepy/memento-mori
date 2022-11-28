@@ -8,15 +8,23 @@ import React, { useState } from 'react';
 function App() {
   // State for which page to display
   const [page, setPage] = useState('home');
+  const [userAcc, setUserAcc] = useState();
 
-  function loginSuccessful(userEmail) {
-    console.log('Login Successful by ' + userEmail);
+  // Reload the app component when userAcc is set
+  React.useEffect(() => {
+    console.log('userAcc', userAcc);
     setPage('hand');
+  }, [userAcc]);
+
+
+  function loginSuccessful(user) {
+    setUserAcc(user);
+    console.log('Login Successful by ' + userAcc.providerData[0].displayName);
     console.log(page);
   }
   return (
     <div className="App">
-      <Navbar />
+      {userAcc == undefined ? <Navbar user={{ email: 'Guest' }} /> : <Navbar user={userAcc} />}
       {page === 'home' ? <Home loginSuccessful={loginSuccessful} /> : null}
       {page === 'hand' ? <Hand /> : null}
     </div>

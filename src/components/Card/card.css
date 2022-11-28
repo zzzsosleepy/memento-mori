@@ -117,3 +117,38 @@
     background-size: cover;
     background-position: center;
 }
+
+.card-08 {
+    background-image: url('/public/images/cardback08.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-09 {
+    background-image: url('/public/images/cardback09.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-10 {
+    background-image: url('/public/images/cardback10.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-11 {
+    background-image: url('/public/images/cardback11.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-12 {
+    background-image: url('/public/images/cardback12.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

@@ -8,8 +8,8 @@ import { ImGoogle3 } from 'react-icons/im';
 
 
 export default function Home({ loginSuccessful }) {
-    const messageRef = useRef();
-    const ref = collection(firestore, "messages");
+    // const messageRef = useRef();
+    // const ref = collection(firestore, "messages");
 
     // const handleSave = async (e) => {
     //     e.preventDefault();
@@ -37,17 +37,17 @@ export default function Home({ loginSuccessful }) {
                 // The signed-in user info.
                 const user = result.user;
                 console.log(user.email + " signed in");
-                // call the loginSuccess function to set the page state
-                loginSuccessful(user.email);
-                // ...
+                // call the loginSuccess function after the user has signed in
+                loginSuccessful(user);
             }).catch((error) => {
                 // Handle Errors here.
                 const errorCode = error.code;
                 const errorMessage = error.message;
                 // The email of the user's account used.
-                const email = error.customData.email;
+                const email = error.email;
                 // The AuthCredential type that was used.
                 const credential = GoogleAuthProvider.credentialFromError(error);
+                console.log(errorCode + ": " + errorMessage);
                 // ...
             });
     }
