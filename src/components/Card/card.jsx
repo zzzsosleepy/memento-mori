@@ -34,7 +34,7 @@ const Card = ({ cardBack = '' }) => {
             const distance = Math.sqrt(center.x ** 4 + center.y ** 2);
 
             $card.style.transform = `
-                scale3d(1.07, 1.07, 1.07)
+                scale3d(1.5, 1.5, 1.5)
                 rotate3d(
                 ${center.y / 100},
                 ${center.x / 100},

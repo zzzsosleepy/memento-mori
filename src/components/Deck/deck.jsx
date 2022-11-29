@@ -4,7 +4,7 @@ import './deck.css';
 
 const Deck = () => {
     let cards = [];
-    for (let i = 8; i < 18; i++) {
+    for (let i = 8; i < 27; i++) {
         // Random number between 1 and 2
         // let cardBack = Math.floor(Math.random() * 11) + 1;
         // Random number between 9 and 11
